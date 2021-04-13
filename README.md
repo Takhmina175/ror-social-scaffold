@@ -1,11 +1,12 @@
-# Scaffold for social media app with Ruby on Rails
+# Social Network Application With Ruby On Rails
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
 ## Built With
 
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
+* Ruby 3.0
+* Rais 6
 
 ## Live Demo
 
