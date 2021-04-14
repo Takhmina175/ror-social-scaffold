@@ -13,7 +13,7 @@ The purpose of this project is to build a social media application that allows u
 ## Getting Started
 
 **To clone and run the application locally, use the following steps:**
-- On Github, on the main page of the private-event repository, click ![the Code button](image/code.png) and copy "Clone with HTTPS" by clicking ![the copy icon](image/copy.png).
+- On Github, on the main page of the private-event repository, click ![the Code button](images/code.png) and copy "Clone with HTTPS" by clicking ![the copy icon](images/copy.png).
 - In your terminal, enter a `git clone` and past the link that you copied from the repository, and press the `Enter`
 (e.g. git clone https://github.com/gdumani/private-events.git).
 - Navigate to the project folder using `cd folder_name`
