@@ -28,7 +28,7 @@ Polymorphic association build relationship with other models on a single associa
  For example, in this project, we defined the polymorphic association between the Comment model and other models like Post and User. Furthermore, we identified a Self-join association between the user and his friend. The database design for building social network applications that demonstrated in the diagram below. 
 
 ## Database design
-![Database diagram](image/database_diagram.png) 
+![Database diagram](images/db_diagram.png) 
 
 ## Authors
 
