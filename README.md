@@ -24,8 +24,11 @@ The purpose of this project is to build a social media application that allows u
 - To verify the connection [Visit localhost:3000](http://localhost:3000 ).
 
 ## Associations
-Polymorphic association build relationship with other models on a single association.
- For example, in this project, we defined the polymorphic association between the Comment model and other models like Post and User. Furthermore, we identified a Self-join association between the user and his friend. The database design for building social network applications that demonstrated in the diagram below. 
+**Polymorphic** association build relationship with other models on a single
+ association. For example, in this project, we defined the polymorphic association
+ between the `Comment` model and other models like `Post` and `User`. Furthermore, we
+ identified a **Self-join** association between the user and his friend. The database
+ design for building social network applications demonstrated in the diagram below. 
 
 ## Database design
 ![Database diagram](images/db_diagram.png) 
