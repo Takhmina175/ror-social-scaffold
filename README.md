@@ -4,6 +4,7 @@
 > This repo includes initial code for social media app with basic styling.
 The purpose of this project is to build a social media application that allows users to send friendship requests, create a post, make comments on a related post, and put likes to own and the other users' posts. 
 
+
 ## Built With
 
 * Ruby 3.0
