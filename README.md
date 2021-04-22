@@ -1,91 +1,63 @@
-# Social Network Application With Ruby On Rails
+# Stay In Touch Application 
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+> This repo includes initial code for social media app with basic styling.
+The purpose of this project is to build a social media application that allows users to send friendship requests, create a post, make comments on a related post, and put likes to own and the other users' posts. 
+
 
 ## Built With
 
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
-
-## Live Demo
-
-TBA
-
+* Ruby 3.0
+* Rais 6
+* PostgreSQL
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+**To clone and run the application locally, use the following steps:**
+- On Github, on the main page of the private-event repository, click ![the Code button](images/code.png) and copy "Clone with HTTPS" by clicking ![the copy icon](images/copy.png).
+- In your terminal, enter a `git clone` and past the link that you copied from the repository, and press the `Enter`
+(e.g. git clone https://github.com/gdumani/private-events.git).
+- Navigate to the project folder using `cd folder_name`
+- To install all dependencies, run `bundle install`
+- To create a database, run `db:create`
+- To migrate the schema, run `db:migrate`
+- Now, you can run your application using the `rails s` command.
+- To verify the connection [Visit localhost:3000](http://localhost:3000 ).
 
-### Prerequisites
+## Associations
+**Polymorphic** association build relationship with other models on a single
+ association. For example, in this project, we defined the polymorphic association
+ between the `Comment` model and other models like `Post` and `User`. Furthermore, we
+ identified a **Self-join** association between the user and his friend. The database
+ design for building social network applications demonstrated in the diagram below. 
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
-
-### Setup
-
-Instal gems with:
-
-```
-bundle install
-```
-
-Setup database with:
-
-```
-   rails db:create
-   rails db:migrate
-```
-
-### Github Actions
-
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
-
-
-### Usage
-
-Start server with:
-
-```
-    rails server
-```
-
-Open `http://localhost:3000/` in your browser.
-
-### Run tests
-
-```
-    rpsec --format documentation
-```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
-### Deployment
-
-TBA
+## Database design
+![Database diagram](images/db_diagram.png) 
 
 ## Authors
 
-TBA
+**Giancarlo Dumani**
 
-## 🤝 Contributing
+- GitHub: [@gdumani](https://github.com/gdumani)
+- Twitter: [@gdumani1](https://twitter.com/gdumani1)
+- LinkedIn: [ Giancarlo-Dumani](https://www.linkedin.com/in/gdumani/?originalSubdomain=cr)
 
-Contributions, issues and feature requests are welcome!
+**Mina**
 
-Feel free to check the [issues page](issues/).
+- GitHub: [@Takhmina175](https://github.com/Takhmina175)
+- Twitter: [@Takhmin73630110](https://twitter.com/Takhmin73630110)
+- LinkedIn: [Takhmina Makhkamova](https://www.linkedin.com/in/takhmina-makhkamova-7628136b/)
+
+
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+## License
 
-TBA
+This project is [MIT](./LICENSE) licensed.
 
-## 📝 License
+## Acknowledgements
 
-TBA
-
+- [Microverse](https://microverse.org)
