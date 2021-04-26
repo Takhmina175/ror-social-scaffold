@@ -9,6 +9,4 @@ class FriendshipsController < ApplicationController
       end
     end
 
-    def destroy
-    end
 end
