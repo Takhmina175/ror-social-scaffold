@@ -1,16 +1,15 @@
 class FriendshipsController < ApplicationController 
-    # def new
-    #   @friend= User.find(params["format"])
-    # end
-    
+
+    before_action :setup_friend
+
     def create       
-      Friendship.request(curren_user.id, params[:id])
+      Friendship.request(@user, @friend)
       flash[:notice] = "Friend request sent."
-      redirect_to root_path(@friend)
+      redirect_to users_path
     end 
     
-    def accept 
-      if @user.requested_friends.include?(@friend)
+    def update 
+      if @user.pending_friends.include?(@friend)
         Friendship.accept(@user, @friend)
         flash[:notice] = "Friendship with #{@friend.name} accepted!"
       else
@@ -19,8 +18,8 @@ class FriendshipsController < ApplicationController
     redirect_to root_path
     end 
     
-    def delete 
-      if @user.requested_friends.include?(@friend)
+    def destroy
+      if Friendship.find_by_user_id_and_friend_id(@user,@friend)
       Friendship.breakup(@user, @friend)
       flash[:notice] = "Friendship with #{@friend.name} deleted!"
       else
@@ -28,5 +27,9 @@ class FriendshipsController < ApplicationController
       end
     redirect_to root_path
     end 
+
+    def setup_friend
+      @user=current_user
+      @friend=User.find(params[:id])
     end
-    
+  end

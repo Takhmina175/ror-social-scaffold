@@ -1,7 +1,10 @@
 <li>
   Name: <%= user.name %>
-  <span class="profile-link">
+    <span class= 'btn btn-outline-secondary'>
+    <%= current_user.friendships.find_by_friend_id(user).status if current_user.friendships.find_by_friend_id(user)%>
+    </span>
     <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
-    <%= link_to 'Add friend', friendships_path(post), class: 'btn btn-success' %>
-  </span>
+    <%= link_to 'Add friend', friendships_path(:id => user.id), :method => :post, class: "btn btn-outline-success" if !Friendship.find_by_user_id_and_friend_id(current_user,user) && current_user!=user%>
+    <%= link_to 'Delete friend', friendship_path(:id => user.id), :method => :delete, class: 'btn btn-outline-warning'if Friendship.find_by_user_id_and_friend_id(current_user,user) %>
+    <%= link_to 'Accept Friendship', friendship_path(:id => user.id), :method => :patch, class: 'btn btn-outline-success' if current_user.pending_friends.include?(user)%>
 </li>
