@@ -17,4 +17,8 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
+  def add_gravatar(user)
+    user.gravatar_url=user_gravatar(user).gravatar_url
+  end
+
 end
