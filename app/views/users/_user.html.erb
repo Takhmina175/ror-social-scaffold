@@ -1,5 +1,5 @@
 <li>
-  Name: <%= user.name %><br>
+  Name: <%=user_gravatar(user)%><%= user.name %> <br> 
     <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
     <%= link_to 'Add friend', friendships_path(:id => user.id), :method => :post, class: "btn btn-outline-success btn-sm  " if !Friendship.find_by_user_id_and_friend_id(current_user,user) && current_user!=user%>
     <%= link_to 'Delete friend', friendship_path(:id => user.id), :method => :delete, class: 'btn btn-outline-warning btn-sm' if Friendship.find_by_user_id_and_friend_id(current_user,user) %>
