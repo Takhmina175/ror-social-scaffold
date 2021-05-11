@@ -21,7 +21,7 @@
         </div>
       
         <% if current_user %>
-          <div class="menu-item"><%= current_user.name%></div>
+          <div class="menu-item"><%=user_gravatar(current_user)%><%= current_user.name%></div>
           <div class="menu-item">
             <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
           </div>
