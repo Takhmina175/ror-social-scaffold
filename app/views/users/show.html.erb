@@ -1,6 +1,11 @@
 <section class="user-section">
-  <h2><%= "Name: #{@user.name}" %></h2>
-  <%= link_to 'Add friend', friendships_path(:id => @user.id), :method => :post, class: 'btn btn-success' %>
+  <h2><%=user_gravatar(@user, 80)%>&nbsp;<%= "Name: #{@user.name}" %></h2>
+  <%= link_to 'Add friend', friendships_path(:id => @user.id), :method => :post, class: 'btn btn-success' if !Friendship.find_by_user_id_and_friend_id(current_user,@user) && current_user!=@user%>
+  <%if current_user.friendships.find_by_friend_id(@user)%>
+    <button class='btn btn-secondary btn-sm gap-2'>
+      <%= current_user.friendships.find_by_friend_id(@user).status %>
+    </button>
+  <%end%>
 
   <article class="timeline">
     <h3>Recent posts:</h3>
