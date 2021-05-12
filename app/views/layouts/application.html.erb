@@ -24,11 +24,7 @@
       
       <div>
         <% if current_user %>
-<<<<<<< HEAD
           <div class="menu-item"><%=user_gravatar(current_user)%>&nbsp;<%= current_user.name%></div>
-=======
-          <div class="menu-item"><%=user_gravatar(current_user)%>&nbsp;<%= current_user.name%></div>
->>>>>>> b6f8b90159c7c1c19933b99f1a68ac42f4fccc7e
           <div class="menu-item">
             <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
           </div>
