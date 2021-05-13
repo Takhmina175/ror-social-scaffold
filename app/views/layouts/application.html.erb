@@ -24,7 +24,7 @@
         </div>
         <div class="menu-item">
           <i class="bi bi-bell"></i>
-          <%= link_to "#{notification(current_user)}", user_path(current_user) %>
+          <%= link_to "#{notification(current_user)}", user_path(current_user) if current_user && notification(current_user)>0%>
           
         </div>
         
