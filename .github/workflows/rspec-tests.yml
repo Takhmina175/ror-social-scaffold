@@ -4,7 +4,7 @@ on: pull_request
 
 env:
   FORCE_COLOR: 1
-  RUBY_VERSION: 2.7.x
+  RUBY_VERSION: 2.7.0
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: postgres
   POSTGRES_DB: postgres
