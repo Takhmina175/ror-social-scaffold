@@ -11,7 +11,7 @@ env:
 jobs:
   rspec-test:
     name: RSpec
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     services:
       postgres:
         image: postgres:latest
@@ -23,8 +23,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-ruby@v1
-        with:
-          ruby-version: 2.7.0
       - name: Install postgres client
         run: sudo apt-get install libpq-dev
       - name: Install dependencies
