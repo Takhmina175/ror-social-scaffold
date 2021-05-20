@@ -6,8 +6,8 @@ RSpec.feature 'FriendshipsController', type: :feature do
       @friend = User.create(name: 'friend', email: 'f@m', password: '123456', password_confirmation: '123456')
       visit new_user_session_path
       within('form') do
-        fill_in 'Email',	with: 'u@m'
-        fill_in 'Password',	with: '123456'
+        fill_in 'Email', with: 'u@m'
+        fill_in 'Password', with: '123456'
       end
       click_button 'Log in'
       click_link 'All users'
@@ -32,8 +32,8 @@ RSpec.feature 'FriendshipsController', type: :feature do
     scenario 'update friendship' do
       click_link 'Sign out'
       within('form') do
-        fill_in 'Email',	with: 'f@m'
-        fill_in 'Password',	with: '123456'
+        fill_in 'Email', with: 'f@m'
+        fill_in 'Password', with: '123456'
       end
       click_button 'Log in'
       visit users_path(id: '2')
@@ -52,8 +52,8 @@ RSpec.feature 'FriendshipsController', type: :feature do
     scenario 'Destroy friendship' do
       click_link 'Sign out'
       within('form') do
-        fill_in 'Email',	with: 'f@m'
-        fill_in 'Password',	with: '123456'
+        fill_in 'Email', with: 'f@m'
+        fill_in 'Password', with: '123456'
       end
       click_button 'Log in'
       visit users_path(id: '2')
