@@ -1,6 +1,10 @@
 name: rspec-tests
 
+<<<<<<< HEAD
 on: pull_request
+=======
+on:  pull_request
+>>>>>>> 01e4286a5d5d6ca27480089e133784fea5a60616
 
 env:
   FORCE_COLOR: 1
