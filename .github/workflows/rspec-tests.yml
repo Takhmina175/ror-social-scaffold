@@ -1,6 +1,6 @@
 name: rspec-tests
 
-on: pull_request
+on: [push, pull_request]
 
 env:
   FORCE_COLOR: 1
@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: actions/setup-ruby@v1
         with: 
-          ruby-version: 2.7.x
+          ruby-version: 2.7
       - name: Install postgres client
         run: sudo apt-get install libpq-dev
       - name: Install dependencies
