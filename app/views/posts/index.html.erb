@@ -10,6 +10,6 @@
     Recent posts
   </h3>
   <ul class="posts">
-    <%= render @timeline_posts %>
+    <%= render @timeline_posts.where(user: [current_user.friends, current_user].flatten) %> 
   </ul>
 </article>
