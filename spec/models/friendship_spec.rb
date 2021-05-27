@@ -4,7 +4,6 @@ RSpec.describe Friendship, type: :model do
     @user = User.create!(name: 'user', email: 'user@m', password: '123456', password_confirmation: '123456')
     @friend = User.create!(name: 'friend', email: 'friend@m', password: '123456', password_confirmation: '123456')
   end
-  # let(:new){Friendship.new}
   let(:request) { Friendship.request(@user, @friend) }
   let(:accept) { Friendship.accept(@user, @friend) }
   let(:breakup) { Friendship.breakup(@user, @friend) }
