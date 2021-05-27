@@ -21,7 +21,8 @@ class PostsController < ApplicationController
 
   def timeline_posts
     @timeline_posts ||= Post.all.ordered_by_most_recent.includes(:user).where(
-      user: [current_user.friends, current_user].flatten)
+      user: [current_user.friends, current_user].flatten
+    )
   end
 
   def post_params
