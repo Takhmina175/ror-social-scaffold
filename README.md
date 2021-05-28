@@ -7,8 +7,8 @@ The purpose of this project is to build a social media application that allows u
 
 ## Built With
 
-* Ruby 3.0
-* Rais 6
+* Ruby 2.7.2
+* Rails 5.2.6
 * PostgreSQL
 
 ## Getting Started
@@ -33,6 +33,35 @@ The purpose of this project is to build a social media application that allows u
 
 ## Database design
 ![Database diagram](images/db_diagram.png) 
+
+## Steps for running and installing RSpec
+- add `gem rspec-rails` and `gem 'rexml'` to the Gem file
+- run `bundle install`
+- run `rails generate rspec:install` to create spec directory and spec_helper.rb files
+- run `rails generate rspec:model model_name` to create tests for model associations and validations.
+- To test associations in the model using `Shoulda Matchers`:
+- Include shoulda-matchers in your Gemfile:
+   ```
+    group :test do
+        gem 'shoulda-matchers', '~> 4.0'
+    end
+   ```
+- Run `bundle install.`
+- Place at the bottom of `spec/rails_helper.rb` the following code:
+
+```
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+```
+- You can use the `rspec` or `bundle exec rspec` command to run all spec files.
+- To test files in a single directory, run `rspec spec/models`
+- To test a single spec file, run `rspec spec/models/user_spec.rb`
+- To run a specific example from your user_spec.rb file, run `rspec spec/models/user_spec.rb:5`
+
 
 ## Authors
 
