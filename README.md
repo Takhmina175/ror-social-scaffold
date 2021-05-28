@@ -11,6 +11,9 @@ The purpose of this project is to build a social media application that allows u
 * Rails 5.2.6
 * PostgreSQL
 
+## Live Demo
+[Live Demo Link](https://calm-taiga-49135.herokuapp.com/posts ) 
+
 ## Getting Started
 
 **To clone and run the application locally, use the following steps:**
